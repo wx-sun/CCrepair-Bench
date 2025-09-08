@@ -1,6 +1,6 @@
 CCrepairBench: A High-Fidelity Benchmark and Reinforcement Learning Framework for C++ Compilation Repair  
 
-[📄 Framework Diagram](./Framework.pdf)
+![Framework Overview](./20250908190523366.png)
 
 Figure 1: Overview of the CCrepairBench framework, consisting of dataset construction, hybrid evaluation, and reinforcement learning.  
 
