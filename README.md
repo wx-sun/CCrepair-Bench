@@ -52,6 +52,9 @@ Key contributions:
   - Full reward only when the fix is both semantically valid and compilable.  
   - Prevents trivial or destructive patches.  
 
+## 📂 Repository Structure  
+
+```plaintext
 CCrepair-Bench/
 ├── data/               # Dataset and related resources
 ├── evaluate/           # Evaluation scripts and configs
@@ -64,7 +67,6 @@ CCrepair-Bench/
 ├── verl.egg-info/      # Package metadata
 ├── requirements.txt    # Dependencies
 └── README.md           # Project documentation
-
 
 ## 🚀 Usage  
 
