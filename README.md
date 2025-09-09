@@ -58,15 +58,17 @@ Key contributions:
 CCrepair-Bench/
 ├── data/               # Dataset and related resources
 ├── evaluate/           # Evaluation scripts and configs
-├── examples/           # Example scripts and usage cases
-├── model_transfer/     # Model transfer and adaptation code
-├── recipe/             # Training/evaluation recipes
-├── scripts/            # Utility and helper scripts
-├── tests/              # Unit tests
+├── examples/           
+├── model_transfer/    
+├── recipe/             
+├── scripts/           
+├── tests/             
 ├── verl/               # Core source code of the framework
-├── verl.egg-info/      # Package metadata
-├── requirements.txt    # Dependencies
-└── README.md           # Project documentation
+├── verl.egg-info/      
+├── requirements.txt    
+└── README.md           
+
+```
 
 ## 🚀 Usage  
 
@@ -82,31 +84,26 @@ CCrepair-Bench/
    ```
 
 3. **Start Ray**  
-   Before training, start a Ray cluster:  
    ```bash
    ray start --head --num-cpus 6
    ```
 
 4. **Run training with CUDA**  
-   Specify available GPUs and launch training with the provided script:  
    ```bash
    bash examples/grpo_trainer/run_qwen25_7b_compile.sh
    ```
 
 5. **Monitor training with TensorBoard**  
-   You can track metrics such as loss during training:  
    ```bash
    tensorboard --logdir tensorboard_log/verl_grpo_example_compile_gt/qwen2_1.5b_compile_rm_gt
    ```
 
-6. **Convert model format for deployment**  
-   To deploy with **vLLM**, convert the trained model from Verl format to Hugging Face format:  
+6. **Convert model format for deployment**   
    ```bash
    bash model_transfer/model_transfer.sh
    ```
 
-7. **Evaluate with LLM-as-a-Judge (advanced evaluation)**  
-   For semantic-level evaluation using the hybrid judge, run:  
+7. **Evaluate with LLM-as-a-Judge (advanced evaluation)**   
    ```bash
    python evaluate/evaluate_llm_merged_with_LLM_as_Judge.py 
    ```
@@ -117,10 +114,12 @@ CCrepair-Bench/
 If you use this work, please cite:  
 
 ```bibtex
-@article{sun2026ccrepairbench,
-  title={CCrepairBench: A High-Fidelity Benchmark and Reinforcement Learning Framework for C++ Compilation Repair},
-  author={Sun, Weixuan and Zhai, Jucai and Zhang, Xin and Liu, Dengfeng and Wu, Xiaojun and Hao, Qiaobo and AIMgroup and Fang, Yang and Tang, Jiuyang},
-  journal={AAAI Conference on Artificial Intelligence},
-  year={2026}
+@inproceedings{sun2025ccrepairbench,
+  title     = {CCrepairBench: A High-Fidelity Benchmark and Reinforcement Learning Framework for C++ Compilation Repair},
+  author    = {Weixuan Sun and Jucai Zhai and Xin Zhang and Dengfeng Liu and Xiaojun Wu and Qiaobo Hao and AIMgroup and Yang Fang and Jiuyang Tang},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  year      = {2025},
+  address   = {Philadelphia, USA}
 }
+
 ```  
