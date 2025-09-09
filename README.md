@@ -52,12 +52,15 @@ Key contributions:
   - Full reward only when the fix is both semantically valid and compilable.  
   - Prevents trivial or destructive patches.  
 
+Got it ✅ Since your repo is named **`CCrepair-Bench`**, the usage section should reference that name. Here’s the corrected version:
+
+```markdown
 ## 🚀 Usage  
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/your-repo/ccrepair-bench.git
-   cd ccrepair-bench
+   git clone https://github.com/your-username/CCrepair-Bench.git
+   cd CCrepair-Bench
    ```
 
 2. **Install dependencies**  
@@ -79,6 +82,8 @@ Key contributions:
    ```bash
    python evaluate.py --model checkpoints/best_model
    ```
+```
+
 
 ## 📂 Repository Structure  
 
@@ -93,16 +98,6 @@ Key contributions:
 └── README.md            # This file
 ```
 
-## 📸 Figures  
-
-![Framework Overview](./assets/page3_img1.png)  
-*Figure 1: CCrepairBench framework overview*  
-
-![Reward Comparison](./assets/page7_img1.png)  
-*Figure 2: Reward dynamics with LLM-as-a-Judge*  
-
-![Dataset Structure](./assets/page9_img1.png)  
-*Figure 3: Dataset structure illustration*  
 
 ## 🤝 Citation  
 
