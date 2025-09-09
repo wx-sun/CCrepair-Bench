@@ -52,9 +52,23 @@ Key contributions:
   - Full reward only when the fix is both semantically valid and compilable.  
   - Prevents trivial or destructive patches.  
 
-Got it ✅ Since your repo is named **`CCrepair-Bench`**, the usage section should reference that name. Here’s the corrected version:
-
 ```markdown
+## 📂 Repository Structure  
+
+```plaintext
+.
+├── data/               # Dataset and related resources
+├── evaluate/           # Evaluation scripts and configs
+├── examples/           # Grpo_trainer
+├── model_transfer/     
+├── recipe/            
+├── scripts/            
+├── tests/             
+├── verl/               # Core source code of the framework
+├── verl.egg-info/      
+├── requirements.txt   
+```
+
 ## 🚀 Usage  
 
 1. **Clone the repository**  
@@ -68,35 +82,35 @@ Got it ✅ Since your repo is named **`CCrepair-Bench`**, the usage section shou
    pip install -r requirements.txt
    ```
 
-3. **Download dataset**  
+3. **Start Ray**  
+   Before training, start a Ray cluster:  
    ```bash
-   bash scripts/download_dataset.sh
+   ray start --head --num-cpus 6
    ```
 
-4. **Train with RL**  
+4. **Run training with CUDA**  
+   Specify available GPUs and launch training with the provided script:  
    ```bash
-   python train_rl.py --config configs/ccrepair.yaml
+   bash examples/grpo_trainer/run_qwen25_7b_compile.sh
    ```
 
-5. **Evaluate the model**  
+5. **Monitor training with TensorBoard**  
+   You can track metrics such as loss during training:  
    ```bash
-   python evaluate.py --model checkpoints/best_model
+   tensorboard --logdir tensorboard_log/verl_grpo_example_compile_gt/qwen2_1.5b_compile_rm_gt
    ```
-```
 
+6. **Convert model format for deployment**  
+   To deploy with **vLLM**, convert the trained model from Verl format to Hugging Face format:  
+   ```bash
+   bash model_transfer/model_transfer.sh
+   ```
 
-## 📂 Repository Structure  
-
-```plaintext
-.
-├── data/                # CCrepair dataset
-├── scripts/             # Download & preprocessing scripts
-├── configs/             # Training configs
-├── train_rl.py          # RL training entrypoint
-├── evaluate.py          # Evaluation script
-├── assets/              # Images & figures
-└── README.md            # This file
-```
+7. **Evaluate with LLM-as-a-Judge (advanced evaluation)**  
+   For semantic-level evaluation using the hybrid judge, run:  
+   ```bash
+   python evaluate/evaluate_llm_merged_with_LLM_as_Judge.py 
+   ```
 
 
 ## 🤝 Citation  
