@@ -52,22 +52,19 @@ Key contributions:
   - Full reward only when the fix is both semantically valid and compilable.  
   - Prevents trivial or destructive patches.  
 
-```markdown
-## 📂 Repository Structure  
-
-```plaintext
-.
+CCrepair-Bench/
 ├── data/               # Dataset and related resources
 ├── evaluate/           # Evaluation scripts and configs
-├── examples/           # Grpo_trainer
-├── model_transfer/     
-├── recipe/            
-├── scripts/            
-├── tests/             
+├── examples/           # Example scripts and usage cases
+├── model_transfer/     # Model transfer and adaptation code
+├── recipe/             # Training/evaluation recipes
+├── scripts/            # Utility and helper scripts
+├── tests/              # Unit tests
 ├── verl/               # Core source code of the framework
-├── verl.egg-info/      
-├── requirements.txt   
-```
+├── verl.egg-info/      # Package metadata
+├── requirements.txt    # Dependencies
+└── README.md           # Project documentation
+
 
 ## 🚀 Usage  
 
