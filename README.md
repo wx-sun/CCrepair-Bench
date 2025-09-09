@@ -111,9 +111,9 @@ CCrepair-Bench/
 
 ## 🤝 Citation  
 
-If you use this work, please cite:  
+If you find this work useful, please cite our paper:  
 
-```bibtex
+<!--
 @inproceedings{sun2025ccrepairbench,
   title     = {CCrepairBench: A High-Fidelity Benchmark and Reinforcement Learning Framework for C++ Compilation Repair},
   author    = {Weixuan Sun and Jucai Zhai and Xin Zhang and Dengfeng Liu and Xiaojun Wu and Qiaobo Hao and AIMgroup and Yang Fang and Jiuyang Tang},
@@ -121,5 +121,7 @@ If you use this work, please cite:
   year      = {2025},
   address   = {Philadelphia, USA}
 }
+-->
 
-```  
+📌 Note: The paper is under submission. The official citation will be added once it is accepted.
+
